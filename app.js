@@ -4,10 +4,6 @@ const prompt = require('prompt');
 const Twitter = require('twitter');
 var T = new Twitter(config);
 
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').load();
-}
-
 // get input from user
 prompt.start();
 prompt.get(['tweet'], function(err, result) {
