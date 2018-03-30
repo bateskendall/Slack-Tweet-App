@@ -1,8 +1,12 @@
 // app.js
-var config = require('./config.js');
-var prompt = require('prompt');
-var Twitter = require('twitter');
+const config = require('./config.js');
+const prompt = require('prompt');
+const Twitter = require('twitter');
 var T = new Twitter(config);
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').load();
+}
 
 // get input from user
 prompt.start();
