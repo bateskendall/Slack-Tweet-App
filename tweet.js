@@ -44,7 +44,7 @@ const create = (userId, submission) => {
 		else{
 			sendConfirmation(tweet);
 			return tweet;
-		},
+		};
 	});
 }
 
