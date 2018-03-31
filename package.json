@@ -6,10 +6,10 @@
 	"npm": "5.6.0"
   },
   "description": "A Node.js Twitter bot for Slack.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "node src/app2.js"
+	"start": "node index.js"
   },
   "author": "Kendall Bates",
   "license": "ISC",
