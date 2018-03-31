@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
 	"node": "8.10.0"
-  }
+  },
   "description": "A Node.js Twitter bot for Slack.",
   "main": "app.js",
   "scripts": {
