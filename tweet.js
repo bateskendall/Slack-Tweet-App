@@ -12,9 +12,7 @@ var T = new Twitter(config);
 //Send tweet confirmation.
 const sendConfirmation = (tweet) => {
 	axios.post('https://slack.com/api/chat.postMessage', qs.stringify({
-		token: process.env.SLACK_ACCESS_TOKEN,
-		channel: tweet.userId,
-		text: 'Tweet sent!'
+
 	})).then((result) => {
 		debug('sendConfirmation: %o', result.data);
 		}).catch((err) => {
