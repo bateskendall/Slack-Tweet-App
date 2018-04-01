@@ -9,6 +9,28 @@ const Twitter = require('twitter');
 
 var T = new Twitter(config);
 
+//Send tweet confirmation.
+const sendConfirmation = (tweet) => {
+	axios.post('https://slack.com/api/chat.postMessage', qs.stringify({
+		token: process.env.SLACK_ACCESS_TOKEN,
+		channel: tweet.userId,
+		text: 'Tweet sent!',
+		attachments: JSON.stringify([{
+			title: `${tweet.userId} sent a tweet!`,
+			text: tweet.text,
+			fields: [{
+				title: 'Tweet',
+				value: tweet.title,
+			}],
+		}]),
+	})).then((result) => {
+		debug('sendConfirmation: %o', result.data);
+		}).catch((err) => {
+			debug('sendConfirmation error: %o', err);
+			console.error(err);
+		});
+};
+
 // Create tweet.
 const create = (userId, submission) => {
 	
