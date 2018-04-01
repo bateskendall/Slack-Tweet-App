@@ -1,4 +1,8 @@
-// app.js
+// index.js
+
+/*Code modified from index.js from 
+https://github.com/slackapi/template-slash-command-and-dialogs/blob/master/src/index.js */
+
 require('dotenv').config();
 
 const axios = require('axios');
