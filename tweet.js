@@ -15,7 +15,7 @@ const create = (userId, submission) => {
 	const tweet = {status: submission.title};
 	
 	// post tweet
-	T.post('statuses/update', tweet) => {
+	T.post('statuses/update', tweet, function(err, data, response){
 		// if unsuccessful, log error message
 		if(err){ console.log(err[0].message); }
 		// else display success message
