@@ -15,14 +15,6 @@ const sendConfirmation = (tweet) => {
 		token: process.env.SLACK_ACCESS_TOKEN,
 		channel: tweet.userId,
 		text: 'Tweet sent!',
-		attachments: JSON.stringify([{
-			title: `${tweet.userId} sent a tweet!`,
-			text: tweet.text,
-			fields: [{
-				title: submission.title,
-				value: tweet.title,
-			}],
-		}]),
 	})).then((result) => {
 		debug('sendConfirmation: %o', result.data);
 		}).catch((err) => {
