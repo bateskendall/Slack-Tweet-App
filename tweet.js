@@ -13,12 +13,7 @@ var T = new Twitter(config);
 const sendConfirmation = (tweet) => {
 	axios.post('https://slack.com/api/chat.postMessage', qs.stringify({
 
-	})).then((result) => {
-		debug('sendConfirmation: %o', result.data);
-		}).catch((err) => {
-			debug('sendConfirmation error: %o', err);
-			console.error(err);
-		});
+	}))
 };
 
 // Create tweet.
