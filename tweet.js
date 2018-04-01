@@ -14,15 +14,7 @@ const sendConfirmation = (tweet) => {
 	axios.post('https://slack.com/api/chat.postMessage', qs.stringify({
 		token: process.env.SLACK_ACCESS_TOKEN,
 		channel: tweet.userId,
-		text: 'Tweet sent!',
-		attachments: JSON.stringify([{
-			title: `${tweet.userId} sent a tweet!`,
-			text: tweet.text,
-			fields: [{
-				title: 'Tweet',
-				value: tweet.title,
-			}],
-		}]),
+		text: 'Tweet sent!'
 	})).then((result) => {
 		debug('sendConfirmation: %o', result.data);
 		}).catch((err) => {
