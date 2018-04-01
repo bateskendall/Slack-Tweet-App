@@ -1,10 +1,15 @@
 {
-  "name": "tweetbot",
+  "name": "TweetBot",
   "version": "1.0.0",
+  "engines": {
+	"node": "8.10.0",
+	"npm": "5.6.0"
+  },
   "description": "A Node.js Twitter bot for Slack.",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+	"start": "node index.js"
   },
   "author": "Kendall Bates",
   "license": "ISC",
@@ -13,9 +18,14 @@
   },
   "homepage": "https://github.com/bateskendall/TweetBot#readme",
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
+    "debug": "^3.1.0",
     "dotenv": "^5.0.1",
+    "express": "^4.16.3",
     "npm": "^5.8.0",
     "prompt": "^1.0.0",
+    "querystring": "^0.2.0",
     "twitter": "^1.7.1"
   }
 }
