@@ -9,9 +9,6 @@ const Twitter = require('twitter');
 
 var T = new Twitter(config);
 
-//Send tweet confirmation.
-const sendConfirmation = (tweet) => {};
-
 // Create tweet.
 const create = (userId, submission) => {
 	
