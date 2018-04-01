@@ -33,15 +33,15 @@ app.post('/commands', (req, res) => {
 			token: process.env.SLACK_ACCESS_TOKEN,
 			trigger_id,
 			dialog: JSON.stringify({
-				title: 'Send a tweet!',
+				title: 'Compose new Tweet',
 				callback_id: 'submit-tweet',
 				submit_label: 'Submit',
 				elements: [{
-					label: 'Tweet',
+					label: 'What\'s happening?',
 					type: 'text',
 					name: 'title',
 					value: text,
-					hint: 'What\'s happening?',
+					hint: '',
 				}],
 			})
 		};
