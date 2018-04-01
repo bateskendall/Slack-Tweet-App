@@ -20,7 +20,7 @@ const sendConfirmation = (tweet) => {
 			text: tweet.text,
 			fields: [{
 				title: 'Tweet',
-				value: tweet.status,
+				value: tweet,
 			}],
 		}]),
 	})).then((result) => {
