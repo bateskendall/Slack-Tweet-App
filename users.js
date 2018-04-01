@@ -1,3 +1,8 @@
+//users.js
+
+/*Code copied from users.js from
+https://github.com/slackapi/template-slash-command-and-dialogs/blob/master/src/users.js */
+
 const qs = require('querystring');
 const axios = require('axios');
 
