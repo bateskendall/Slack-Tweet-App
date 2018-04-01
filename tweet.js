@@ -19,8 +19,8 @@ const sendConfirmation = (tweet) => {
 			title: `${tweet.userId} sent a tweet!`,
 			text: tweet.text,
 			fields: [{
-				title: 'Tweet',
-				value: submission.title,
+				title: tweet,
+				value: tweet.title,
 			}],
 		}]),
 	})).then((result) => {
