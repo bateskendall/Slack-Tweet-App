@@ -1,8 +1,3 @@
-require('dotenv').config();
-
-const axios = require('axios');
-const debug = require('debug')('slash-command-template:tweet');
-const qs = require('querystring');
 const config = require('./config');
 const users = require('./users');
 const Twitter = require('twitter');
@@ -12,7 +7,7 @@ var T = new Twitter(config);
 // Create tweet.
 const create = (userId, submission) => {
 	
-	const newTweet = {status: submission.title};
+	var newTweet = {status: submission.title};
 	
 	// post tweet
 	T.post('statuses/update', newTweet, function(err, data, response) {
