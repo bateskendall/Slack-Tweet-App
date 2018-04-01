@@ -35,7 +35,7 @@ app.post('/commands', (req, res) => {
 			dialog: JSON.stringify({
 				title: 'Compose new Tweet',
 				callback_id: 'submit-tweet',
-				submit_label: 'Submit',
+				submit_label: 'Tweet',
 				elements: [{
 					label: 'What\'s happening?',
 					type: 'text',
