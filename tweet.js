@@ -10,11 +10,7 @@ const Twitter = require('twitter');
 var T = new Twitter(config);
 
 //Send tweet confirmation.
-const sendConfirmation = (tweet) => {
-	axios.post('https://slack.com/api/chat.postMessage', qs.stringify({
-
-	}))
-};
+const sendConfirmation = (tweet) => {};
 
 // Create tweet.
 const create = (userId, submission) => {
