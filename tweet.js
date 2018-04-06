@@ -1,5 +1,4 @@
 const config = require('./config');
-const users = require('./users');
 const Twitter = require('twitter');
 
 var T = new Twitter(config);
