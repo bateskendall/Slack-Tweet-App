@@ -7,7 +7,7 @@ var T = new Twitter(config);
 // Create tweet.
 const create = (userId, submission) => {
 	
-	const newTweet = { status: submission.title };
+	const newTweet = {status: submission.title};
 	
 	// post tweet
 	T.post('statuses/update', newTweet, function(err, data, response) {
