@@ -19,3 +19,5 @@ const create = (userId, submission) => {
 		};
 	});
 }
+
+module.exports = { create };
