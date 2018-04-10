@@ -19,7 +19,7 @@ const confirmTweet = (userId, submission) => {
 // Create tweet.
 const create = (userId, submission) => { 
   T.post('statuses/update', {status: submission.title});
-  sendConfirmation(userId, submission);
+  confirmTweet(userId, submission);
 }
 
 module.exports = { create, confirmTweet };
