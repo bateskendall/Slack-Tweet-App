@@ -44,6 +44,7 @@ app.post('/commands', (req, res) => {
 					label: 'What\'s happening?',
 					type: 'textarea',
 					name: 'title',
+					maxlength: 280,
 				}],
 			})
 		};
