@@ -42,10 +42,9 @@ app.post('/commands', (req, res) => {
 				submit_label: 'Tweet',
 				elements: [{
 					label: 'What\'s happening?',
-					type: 'text',
+					type: 'textarea',
 					name: 'title',
-					value: text,
-					hint: '',
+					max_length: 280,
 				}],
 			})
 		};
