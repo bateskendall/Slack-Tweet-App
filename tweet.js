@@ -8,7 +8,6 @@ var T = new Twitter(config);
 
 // Confirm tweet to user.
 function confirmTweet(user, name, id) {
-	
 	axios.post('https://slack.com/api/chat.postMessage', qs.stringify({
 		token: process.env.SLACK_ACCESS_TOKEN,
 		channel: user,
