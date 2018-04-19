@@ -12,10 +12,12 @@ function confirmTweet(user, name, id) {
 	axios.post('https://slack.com/api/chat.postMessage', qs.stringify({
 	token: process.env.SLACK_ACCESS_TOKEN,
 	channel: user,
-	text: 'Tweet sent!'
-	attachments: JSON.stringify([{
+	text: 'Tweet sent!',
+	attachments: JSON.stringify([
+		{
 			title: 'https://twitter.com/${name}/status/${id}',
-		}]),
+		},
+	]),
   }));
 };
 
