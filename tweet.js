@@ -13,7 +13,7 @@ function confirmTweet(id, newTweet) {
 			title: `${id} sent a tweet!`
     }]);
   }));
-}
+};
 
 // Create tweet.
 const create = (userId, submission) => { 
