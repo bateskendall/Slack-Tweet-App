@@ -14,7 +14,7 @@ function confirmTweet(id, newTweet) {
 	text: 'Tweet sent!',
 	attachments: JSON.stringify([{
 			// title: `${users.info.name} sent a tweet!`,
-			text: T.get('http://api.twitter.com/1.1/statuses/user_timeline.json?count=2', {include_entities:false},);,
+			text: T.get('/statuses/user_timeline.json', { count: 1 });,
 		}]),
   }));
 };
