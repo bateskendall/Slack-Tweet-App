@@ -12,9 +12,6 @@ function confirmTweet(id, newTweet) {
 	token: process.env.SLACK_ACCESS_TOKEN,
 	channel: id,
 	text: 'Tweet sent!',
-	attachments: JSON.stringify([{
-		title: `${id} sent a tweet!`
-	}]);
   }));
 };
 
@@ -24,4 +21,4 @@ const create = (userId, submission) => {
   confirmTweet(userId, submission.title);
 }
 
-module.exports = { create };
+module.exports = { confirmTweet, create };
