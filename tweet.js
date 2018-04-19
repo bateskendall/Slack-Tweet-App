@@ -5,13 +5,13 @@ const Twitter = require('twitter');
 var T = new Twitter(config);
 
 function confirmTweet(id, newTweet) {
-  axios.post('https://slack.com/api/chat.postMessage', qs.stringify({
-    token: process.env.SLACK_ACCESS_TOKEN,
-		channel: users.find(userId),
-		text: 'Tweet sent!',
-		attachments: JSON.stringify([{
-			title: `${id} sent a tweet!`
-    }]);
+	axios.post('https://slack.com/api/chat.postMessage', qs.stringify({
+	token: process.env.SLACK_ACCESS_TOKEN,
+	channel: userId,
+	text: 'Tweet sent!',
+	attachments: JSON.stringify([{
+		title: `${id} sent a tweet!`
+	}]);
   }));
 };
 
