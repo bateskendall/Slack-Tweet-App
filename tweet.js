@@ -9,10 +9,6 @@ var T = new Twitter(config);
 // Confirm tweet to user.
 function confirmTweet(name, id) {
 	
-	T.get('statuses/user_timeline', { count: 1 } , function(err, data) {
-		data.
-	});
-	
 	axios.post('https://slack.com/api/chat.postMessage', qs.stringify({
 	token: process.env.SLACK_ACCESS_TOKEN,
 	channel: id,
