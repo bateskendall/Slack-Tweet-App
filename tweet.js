@@ -7,11 +7,11 @@ const Twitter = require('twitter');
 var T = new Twitter(config);
 
 // Confirm tweet to user.
-function confirmTweet(name, id) {
+function confirmTweet(user, name, id) {
 	
 	axios.post('https://slack.com/api/chat.postMessage', qs.stringify({
 	token: process.env.SLACK_ACCESS_TOKEN,
-	channel: id,
+	channel: user,
 	text: name,
 	//attachments: JSON.stringify([{
 			// title: `${users.info.name} sent a tweet!`,
@@ -25,7 +25,7 @@ const create = (userId, submission) => {
   T.post('statuses/update', {status: submission.title}, function (err, data, response) {
 	  var username = data.user.screen_name;
 	  var tweetId = data.id_str;
-	  confirmTweet(username, tweetId);
+	  confirmTweet(userId, username, tweetId);
   });
 }
 
