@@ -14,8 +14,7 @@ function confirmTweet(user, name, id) {
 	channel: user,
 	text: 'Tweet sent!'
 	attachments: JSON.stringify([{
-			//title: `${users.info.name} sent a tweet!`,
-			text: 'https://twitter.com/${name}/status/${id}',
+			title: 'https://twitter.com/${name}/status/${id}',
 		}]),
   }));
 };
