@@ -16,7 +16,7 @@ function confirmTweet(user, name, id) {
 };
 
 // Create tweet.
-const create = (userId, submission) => { 
+function create(userId, submission) { 
 	T.post('statuses/update', {status: submission.title}, function (err, data, response) {
 		// Get username and id of newly created tweet to include in url to confirm to user.
 		var username = data.user.screen_name;
