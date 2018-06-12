@@ -21,3 +21,4 @@ The following instructions will help you get this app up and running on your wor
 
 # Acknowledgments
 - Code in index.js modified from https://github.com/slackapi/template-slash-command-and-dialogs/blob/master/src/index.js.
+- Code in users.js copied from https://github.com/slackapi/template-slash-command-and-dialogs/blob/master/src/users.js.
