@@ -1,4 +1,4 @@
-# Slack Tweet App
+# TweetBot Project
 A Slack app that allows user to tweet directly from Slack. Created with Node.js.
 ## Getting Started
 The following instructions will help you get this app up and running on your workspace.
